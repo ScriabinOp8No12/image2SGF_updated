@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 
+# only detects half the white stones (finds all the black stones though),
+# radius needs to be modified to properly find last move hollow circle
+
 def detect_circles(img):
     # Convert the image to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
